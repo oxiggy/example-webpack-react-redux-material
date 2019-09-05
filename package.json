@@ -33,11 +33,17 @@
     "@material-ui/icons": "latest",
     "@material-ui/styles": "latest",
     "classnames": "latest",
+    "connected-react-router": "latest",
+    "history": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-loadable": "latest",
     "react-media": "latest",
+    "react-redux": "latest",
     "react-router-dom": "latest",
     "react-virtualized": "latest",
-    "react-window": "latest"
+    "react-window": "latest",
+    "redux": "latest",
+    "redux-thunk": "latest"
   }
 }
