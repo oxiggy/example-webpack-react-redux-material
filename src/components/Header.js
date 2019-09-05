@@ -11,24 +11,8 @@ import Container from '@material-ui/core/Container'
 
 class Header extends React.PureComponent {
 
-    state= {
-        navOpen: false,
-    }
-
-    handleToggleNav= () => {
-        this.setState({ navOpen:!this.state.navOpen })
-    }
-
-    handleOpenNav= () => {
-        this.setState({ navOpen:true })
-    }
-
-    handleCloseNav= () => {
-        this.setState({ navOpen:false })
-    }
-
     render() {
-        const { classes }= this.props
+        const { classes, navOpen, onOpenNav, onCloseNav, onToggleNav }= this.props
         return (
             <React.Fragment>
                 <AppBar position="static" color="secondary" elevation={0} className={classes.root}>
@@ -38,7 +22,7 @@ class Header extends React.PureComponent {
                                 color="inherit"
                                 edge="start"
                                 aria-label="menu"
-                                onClick={this.handleToggleNav}
+                                onClick={onToggleNav}
                             >
                                 <MenuIcon />
                             </IconButton>
@@ -48,9 +32,9 @@ class Header extends React.PureComponent {
                     </Container>
                 </AppBar>
                 <SwipeableDrawer
-                    open={this.state.navOpen}
-                    onOpen={this.handleOpenNav}
-                    onClose={this.handleCloseNav}
+                    open={navOpen}
+                    onOpen={onOpenNav}
+                    onClose={onCloseNav}
                     classes={{
                         paper: classes.drawerPaper,
                     }}
